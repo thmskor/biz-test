@@ -1,0 +1,41 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    title:
+        label: Название фильма
+        span: auto 
+    slug:
+        label: Ссылка
+        span: auto
+        preset:
+            field: title
+            type: slug        
+    description:
+        label: Описание
+        type: richeditor
+        span: full
+    movie_poster:
+        label: Постер фильма
+        mode: file
+        imageWidth: '250'
+        imageHeight: '250'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    movie_gallery: 
+        label: 'Галерея фильма'
+        mode: file
+        useCaption: true
+        thumbOptions:
+                mode: crop
+                extension: auto
+        span: auto
+        type: fileupload

@@ -1,0 +1,8 @@
+1.0.1: First version of MovieBase
+1.0.3:
+    - Migrations
+    - create_movies_table.php
+    - create_genres_table.php
+1.0.4:
+    - Create Actors Table
+    - create_actors_table.php

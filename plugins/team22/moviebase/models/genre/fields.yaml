@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: Жанр
+        span: auto    
+    slug:
+        label: Ссылка
+        span: auto
+        preset:
+            field: title
+            type: slug
