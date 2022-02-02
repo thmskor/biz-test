@@ -65,7 +65,13 @@ class Genre extends Model
     public $hasOneThrough = [];
     public $hasManyThrough = [];
     public $belongsTo = [];
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'movies' => [
+            'Team22\MovieBase\Models\Movie',
+            'table' => 'team22_moviebase_movies_genres',
+            'order' => 'title',
+        ]
+    ];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

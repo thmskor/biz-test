@@ -69,6 +69,12 @@ class Actor extends Model
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
+    public $attachOne = 
+    [
+        'actor_photo' => 'System\Models\File'
+    ];
+    public $attachMany = 
+    [
+        'actor_gallery' => 'System\Models\File'
+    ];
 }

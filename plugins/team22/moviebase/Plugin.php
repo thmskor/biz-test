@@ -106,7 +106,7 @@ class Plugin extends PluginBase
                     'actors' => [
                         'label'       => 'Актеры',
                         'url'         => Backend::url('team22/moviebase/actors'),
-                        'icon'        => 'icon-leaf',
+                        'icon'        => 'icon-human',
                         'permissions' => ['team22.moviebase.*'],
                         'order'       => 500,
                     ]

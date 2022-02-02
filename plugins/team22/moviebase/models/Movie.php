@@ -61,7 +61,13 @@ class Movie extends Model
      * @var array Relations
      */
   
-    public $belongsToMany = [];
+    public $belongsToMany = [
+        'genres' => [
+            'Team22\MovieBase\Models\Genre',
+            'table' => 'team22_moviebase_movies_genres',
+            'order' => 'title',
+        ]
+    ];
     public $attachOne = 
     [
         'movie_poster' => 'System\Models\File'

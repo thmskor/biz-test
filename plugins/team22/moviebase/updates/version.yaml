@@ -6,3 +6,9 @@
 1.0.4:
     - Create Actors Table
     - create_actors_table.php
+1.0.5:
+    - Update Actors Table
+    - update_actors_table.php
+1.0.6:
+    - Update Moies Genre Pivot Table
+    - create_movies_genres_table.php

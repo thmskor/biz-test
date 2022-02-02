@@ -12,3 +12,9 @@ fields:
         preset:
             field: title
             type: slug
+    movies:
+        label: Фильмы
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation

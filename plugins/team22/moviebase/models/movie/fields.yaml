@@ -39,3 +39,10 @@ fields:
                 extension: auto
         span: auto
         type: fileupload
+    genres:
+        label: Жанры
+        nameFrom: title
+        descriptionFrom: description
+        span: auto
+        type: relation
+        
