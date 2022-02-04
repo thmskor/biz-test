@@ -45,4 +45,9 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-        
+    year:
+        label: Год
+        span: auto 
+    year:
+        label: Популярность
+        span: auto 

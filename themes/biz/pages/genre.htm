@@ -1,0 +1,53 @@
+title = "genre" 
+url = "/genre/:slug/" 
+layout = "default" 
+is_hidden = 0 
+==
+<?php
+use Team22\MovieBase\Models\Genre;
+
+    public function onStart ()
+    {
+        $genre = Genre::where('slug', '=', $this->param('slug'))->first();
+        $this['movies'] = $genre->movies()->paginate(25);
+    }
+?>
+==
+{##}
+<div class="w3_content_agilleinfo_inner">
+    <div class="agile_featured_movies">
+        <div class="wthree_agile-requested-movies">
+            {% for movie in movies %}
+            {% partial 'movie' movie=movie %}
+            {% endfor %}
+            <div class="clearfix"></div>
+        </div>
+        <!--//requested-movies-->
+        <div class="blog-pagenat-wthree">
+            {% if movies.hasPages %}
+            <ul>
+            <li>
+                {% if movies.currentPage > 1 %}
+                    <a href="{{ movies.previousPageUrl }}" rel="prev">«</a>
+                {% else %}
+                    <span class="disabled">«</span>
+                {% endif %}
+            </li>
+        {% for page in range(1, movies.lastPage) %}
+            <li {{ movies.currentPage == page ? 'class="active"' }}>
+                <a href="{{ movies.url(page) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        <li>
+            {% if movies.hasMorePages %}
+                <a href="{{ movies.nextPageUrl }}" rel="next">»</a>
+            {% else %}
+                <span class="disabled">»</span>
+            {% endif %}
+        </li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>

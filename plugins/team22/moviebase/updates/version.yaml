@@ -10,5 +10,14 @@
     - Update Actors Table
     - update_actors_table.php
 1.0.6:
-    - Update Moies Genre Pivot Table
+    - Update Movies Genre Pivot Table
     - create_movies_genres_table.php
+1.0.7:
+    - Update Movies Table
+    - update_movies_table.php
+1.0.8:
+    - Seed movies
+    - seed.php
+1.0.9:
+    - Update Movies Table
+    - update_movies_table_2.php

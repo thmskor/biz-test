@@ -61,7 +61,8 @@ class Movie extends Model
      * @var array Relations
      */
   
-    public $belongsToMany = [
+    public $belongsToMany = 
+    [
         'genres' => [
             'Team22\MovieBase\Models\Genre',
             'table' => 'team22_moviebase_movies_genres',
@@ -75,5 +76,13 @@ class Movie extends Model
     public $attachMany = 
     [
         'movie_gallery' => 'System\Models\File'
+    ];
+
+    public static $allowedSortingOptions = 
+    [
+        'year desc' => 'Year - desc',
+        'year asc' => 'Year - asc',
+        'popular desc' => 'Popular - desc',
+        'popular asc' => 'Popular - asc'
     ];
 }

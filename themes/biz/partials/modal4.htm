@@ -1,0 +1,25 @@
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4>Login</h4>
+                {% if not user %}
+                {% partial account ~ '::signin' %}
+                {% else %}
+
+                {% partial account ~ '::activation_check' %}
+
+                {% partial account ~ '::update' %}
+
+                {% partial account ~ '::deactivate_link' %}
+
+                 {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

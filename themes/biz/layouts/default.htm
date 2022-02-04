@@ -1,3 +1,8 @@
+[account]
+paramCode = "code"
+forceSecure = 0
+requirePassword = 0
+==
 <!DOCTYPE html>
 <html>
     <head>
@@ -79,7 +84,8 @@
         <footer id="layout-footer">
             {% partial 'footer' %}
         </footer>
-
+        {% partial 'modal4' %}
+        {% partial 'modal5' %}
         <!-- Scripts -->
         <script src="{{'assets/js/jquery-1.11.1.min.js'|theme }}"></script>
         <!-- Dropdown-Menu-JavaScript -->

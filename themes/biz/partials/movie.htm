@@ -1,0 +1,66 @@
+<div class="col-md-2 w3l-movie-gride-agile requested-movies">
+    <a href="movie/{{ movie.slug }}" class="hvr-sweep-to-bottom"
+        ><img
+            src="{{ movie.movie_poster.getPath() }}"
+            title="Movies Pro"
+            class="img-responsive"
+            alt=" "
+        />
+        <div class="w3l-action-icon">
+            <i class="fa fa-play-circle-o" aria-hidden="true"></i>
+        </div>
+    </a>
+    <div class="mid-1 agileits_w3layouts_mid_1_home">
+        <div class="w3l-movie-text">
+            <h6>
+                <a href="movies/{{ movie.slug }}"
+                    >{{ movie.title }}</a
+                >
+            </h6>
+        </div>
+        <div class="mid-2 agile_mid_2_home">
+            <p>{{ movie.year }}</p>
+            <div class="block-stars">
+                <ul class="w3l-ratings">
+                    <li>
+                        <a href="#"
+                            ><i class="fa fa-star" aria-hidden="true"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><i class="fa fa-star" aria-hidden="true"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><i class="fa fa-star-half-o" aria-hidden="true"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><i class="fa fa-star-o" aria-hidden="true"></i
+                        ></a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            ><i class="fa fa-star-o" aria-hidden="true"></i
+                        ></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <p class="fexi_header_para">
+            <span>Genres<label>:</label> </span>
+            {% for genre in movie.genres %}
+            <a href="genre/{{ genre.slug }}">{{ genre.title }}</a> |
+            {% endfor %}
+        </p>
+    </div>
+    {% if user %}
+    <div class="ribben one">
+        <p>favor.</p>
+    </div>
+    {% endif %}
+</div>
